@@ -1,0 +1,409 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    margin: 0px 0px 0px 0px;
+    padding: top;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12px;
+    
+}
+p{
+    font-size: 12px;
+}
+
+header {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 15px 0;
+    border: solid 1px rgba(0,0,0,0.15) ;
+    margin: -10px 0px 0px 0px;
+    width: 100%;
+}
+    
+
+#sub{
+    margin: 0px;
+    padding: 0px 0px 0px 0px;
+    font-size: 2em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #880c1c;
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
+#menu a{
+    text-decoration: none;
+    display: inline-block;
+    color: #3f3f3f;
+    margin: 0 35px;
+    padding: 0.5em 1em;
+}
+
+
+#menu a:hover{
+    background-color: #880c1c;
+    color: #fff;
+    border-radius: 15px;
+}
+
+#habitaciones ul{
+    padding: 0;
+    width: 400%;
+    display: flex;
+    overflow: hidden;
+    animation: movimiento 10s infinite alternate ease-in-out;
+}
+
+#habitaciones {
+    overflow: hidden;
+    height: 600px;
+    margin: 0px 0px 0px 260px;
+}
+
+#habitaciones li{
+    list-style: none;
+}
+
+#habitaciones img{
+    margin: 75px 300px 0px 0px;
+    width: 800px;
+    text-align: center;
+    overflow: hidden;
+}
+
+@keyframes movimiento{
+    0%{margin-left: 0;}
+    20%{margin-left: 0;}
+
+    25%{margin-left: -100%;}
+    45%{margin-left: -100%;}
+
+    50%{margin-left: -200%;}
+    70%{margin-left: -200%;}
+
+    75%{margin-left: -300%;}
+    100%{margin-left: -300%;}
+}
+
+#detras{
+    background: #63bb79;
+}
+
+
+#vista{
+    position: relative;
+    width: 150px;
+    height: 300px;
+    margin: 40px 0px 0px 30px;
+}
+
+#adelante img {
+    position: absolute;
+    width: 300px;
+    height: auto;
+    backface-visibility: hidden;
+    overflow: hidden;
+    transition: 0.5s;
+    transform: perspective(300px) rotateY(0deg);
+    box-shadow: 0px 5px 10px #000;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+#atras img {
+    position: absolute;
+    width: 300px;
+    height: auto;
+    backface-visibility: hidden;
+    overflow: hidden;
+    transition: 0.5s;
+    transform: perspective(300px) rotateY(180deg);
+    box-shadow: 0px 5px 10px #000;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+
+#vista:hover #adelante img{
+    transform: perspective(300px) rotateY(180deg);
+}
+
+#vista:hover #atras img{
+    transform: perspective(300px) rotateY(360deg);
+}
+
+#vista2{
+    position: relative;
+    width: 150px;
+    height: 300px;
+    margin: -300px 0px 0px 360px;
+}
+
+#adelante2 img {
+    cursor: pointer;
+    position: absolute;
+    width: 300px;
+    height: auto;
+    backface-visibility: hidden;
+    overflow: hidden;
+    transition: 0.5s;
+    transform: perspective(300px) rotateY(0deg);
+    box-shadow: 0px 5px 10px #000;
+    object-fit: cover;
+}
+
+
+#atras2 img {
+    position: absolute;
+    width: 300px;
+    height: auto;
+    backface-visibility: hidden;
+    overflow: hidden;
+    transition: 0.5s;
+    transform: perspective(300px) rotateY(180deg);
+    box-shadow: 0px 5px 10px #000;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+
+#vista2:hover #adelante2 img{
+    transform: perspective(300px) rotateY(180deg);
+}
+
+#vista2:hover #atras2 img{
+    transform: perspective(300px) rotateY(360deg);
+}
+
+#vista3{
+    margin: -300px 0px 0px 690px;
+}
+
+
+#vista3 figure{
+    width: 300px;
+    height: 225px;
+    transition: 0.5s;
+    box-shadow: 0px 5px 10px #000;
+    position: relative;
+    cursor: pointer;
+    transition: all 500ms ease-out;
+}
+
+#texto {
+    top: 0;
+    position: absolute;
+    background: rgba(0,0,0,0.5);
+    width: 300px;
+    height: 225px;
+    opacity: 0;
+    transition: all 500ms ease-out;
+    visibility: hidden;
+    text-align: center;
+    line-height: 220px;
+    color: #fff;
+}
+
+#vista3 figure img{
+    width: 100%;
+}
+
+#vista3 figure:hover #texto{
+    opacity: 1;
+    visibility: visible;
+}
+
+#vista4{
+    margin: -225px 0px 0px 1015px;
+}
+
+
+#vista4 figure{
+    width: 300px;
+    height: 225px;
+    transition: 0.5s;
+    box-shadow: 0px 5px 10px #000;
+    position: relative;
+    cursor: pointer;
+    transition: all 500ms ease-out;
+}
+
+#texto2 {
+    top: 0;
+    position: absolute;
+    background: rgba(0,0,0,0.5);
+    width: 300px;
+    height: 225px;
+    opacity: 0;
+    transition: all 500ms ease-out;
+    visibility: hidden;
+    text-align: center;
+    line-height: 220px;
+    color: #fff;
+}
+
+#vista4 figure img{
+    width: 100%;
+}
+
+#vista4 figure:hover #texto2{
+    opacity: 1;
+    visibility: visible;
+}
+
+#habitacion1{
+    background: #c9c6c6;
+    width: 300px;
+    margin: 10px 0px 0px 30px;
+    font-size: 15px;
+}
+
+#habitacion1 h3{
+    color: #334a5c;
+    margin: 5px 0px 0px 15px;
+    padding: 10px 0px 10px 0px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+}
+
+#habitacion1 p{
+    font-size: 13px;
+    margin: 0px 15px 0px 15px;
+    text-align: justify;
+}
+
+#habitacion1 ul{
+    font-size: 13px;
+    margin: 0px 15px 0px 30px;
+    text-align: justify;
+}
+
+#habitacion2{
+    background: #c9c6c6;
+    width: 300px;
+    margin: -388px 0px 0px 360px; 
+    font-size: 15px;
+}
+
+#habitacion2 h3{
+    color: #334a5c;
+    margin: 5px 0px 0px 15px;
+    padding: 10px 0px 10px 0px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+}
+
+#habitacion2 p{
+    font-size: 13px;
+    margin: 0px 15px 0px 15px;
+    text-align: justify;
+}
+
+#habitacion2 ul{
+    font-size: 13px;
+    margin: 0px 15px 0px 30px;
+    text-align: justify;
+}
+
+#habitacion3{
+    background: #c9c6c6;
+    width: 300px;
+    margin: -388px 0px 0px 690px; 
+    font-size: 15px;
+}
+
+#habitacion3 h3{
+    color: #334a5c;
+    margin: 5px 0px 0px 15px;
+    padding: 10px 0px 10px 0px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+}
+
+#habitacion3 p{
+    font-size: 13px;
+    margin: 0px 15px 0px 15px;
+    text-align: justify;
+}
+
+#habitacion3 ul{
+    font-size: 13px;
+    margin: 0px 15px 0px 30px;
+    text-align: justify;
+}
+
+#habitacion4{
+    background: #c9c6c6;
+    width: 300px;
+    margin: -388px 0px 0px 1015px; 
+    font-size: 15px;
+}
+
+#habitacion4 h3{
+    color: #334a5c;
+    margin: 5px 0px 0px 15px;
+    padding: 10px 0px 10px 0px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+}
+
+#habitacion4 p{
+    font-size: 13px;
+    margin: 0px 15px 0px 15px;
+    text-align: justify;
+}
+
+#habitacion4 ul{
+    font-size: 13px;
+    margin: 0px 15px 0px 30px;
+    text-align: justify;
+}
+
+video{
+    margin: 50px 0px 30px 140px;
+    padding: 0px 0px 0px 0px;
+    border: 2px solid white;
+}
+
+#video{
+    background: #63bb79;
+    margin: 100px 0px 0px 0px;
+}
+
+#logo1{
+    width: 300px;
+    height: auto;
+    margin: 30px 0px 0px 100px;
+    padding: 0px 0px 100px 0px;
+}
+
+#logo2{
+margin: 30px 0px 0px 150px;
+    width: 300px;
+    height: auto;
+    padding: 0px 0px 100px 0px;
+}
+
+#pie{
+    background: #8FA99D;
+    height: 60px;
+}
+
+#pie footer{
+    font-weight: bold;
+    font-size: 15px;
+    color: black;
+    letter-spacing: 1px;
+    text-align: center;
+    padding:  20px 0px 0px 0px;
+}
